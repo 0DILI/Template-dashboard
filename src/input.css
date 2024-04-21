@@ -1,0 +1,234 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.app-sidebar {
+    width: 80px;
+    /* width: 180px; */
+    height: 100vh;
+    padding-left: 8px;
+    padding-right: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease;
+}
+
+.logo img {
+    margin-left: 0.5rem;
+}
+
+.app-sidebar ul li {
+    list-style: none;
+    margin: 0.8rem auto;
+    /* line-height: 50px; */
+}
+
+
+.app-sidebar ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-top-left-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+    padding: 15px 0;
+}
+
+.app-sidebar ul li {
+    padding-top: 0.1rem;
+}
+
+
+.app-sidebar ul li a i {
+    min-width: 50px;
+    text-align: center;
+    /* line-height: 50px; */
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+.app-sidebar .nav-item {
+    display: none;
+    /* display: block; */
+    transition: all 0.5s ease;
+
+}
+
+.app-sidebar:hover .nav-item {
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.tooltip {
+    font-size: 11px;
+    text-align: center;
+    opacity: 1;
+    margin-top: -12px;
+    padding-right: 10px;
+    /* display: none; */
+}
+
+.app-sidebar .logo p {
+    display: none;
+
+    transition: all 0.5s ease;
+}
+
+.app-sidebar:hover .logo p {
+    display: block;
+}
+
+
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 80px;
+    /* left: 180px; */
+    right: 0;
+    /* width: 100%; */
+    height: 70px;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+
+.test {
+    background-color: pink;
+}
+
+.app-body {
+    height: calc(100vh - 50px);
+    margin-left: 80px;
+    /* margin-left: 180px; */
+    top: 70px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.app-sidebar:hover {
+    width: 180px;
+    z-index: 9999;
+    padding-left: 14;
+    padding-right: 0;
+}
+
+
+.app-sidebar:hover~.app-header {
+    left: 180px;
+}
+
+.app-sidebar:hover~.app-body {
+    margin-left: 180px;
+}
+
+.app-sidebar:hover .tooltip {
+    opacity: 0;
+}
+
+.ham {
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 858px) {
+    .app-body {
+        margin-left: 0
+    }
+
+    .app-header {
+        left: 0;
+    }
+
+    .ham {
+
+        display: block !important;
+    }
+}
+
+/* FOR CARD GRID */
+.grid-css {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 900px) {
+    .grid-css {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 429px) {
+    .grid-css {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    /* width: 100%;
+    height: 100%; */
+    object-fit: cover;
+}
+
+.swiper-slide {
+    width: 60%;
+}
+
+.swiper-slide:nth-child(1n) {
+    width: 50%;
+}
+
+.swiper-slide2:nth-child(1n) {
+    width: 25%;
+}
+
+@media screen and (max-width: 470px) {
+    .swiper-slide:nth-child(1n) {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1089px) {
+    .swiper-slide2:nth-child(1n) {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 586px) {
+    .swiper-slide2:nth-child(1n) {
+        width: 100%;
+    }
+}
+
+
+
+
+/* .iframe-css {
+    width: 500px;
+    background: red;
+} */
